@@ -4,18 +4,23 @@ import com.springboot.api.dto.MemberDto;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
-@Slf4j
+
 @RestController
 @RequestMapping("/api/v1")
 public class GetController {
 
+    private final Logger LOGGER = LoggerFactory.getLogger(GetController.class);
+
     @GetMapping("/hello")
 //    @ResponseBody
     public String getHello() {
+        LOGGER.info("getHello 메서드 호출 !");
         return "Hello World";
     }
 
