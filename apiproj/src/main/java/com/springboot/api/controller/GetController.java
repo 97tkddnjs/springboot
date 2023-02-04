@@ -1,6 +1,8 @@
 package com.springboot.api.controller;
 
 import com.springboot.api.dto.MemberDto;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
@@ -36,6 +38,16 @@ public class GetController {
     @GetMapping("/member")
     public String getRequestMemberDto(MemberDto dto) {
         return dto.toString();
+    }
+
+    @ApiOperation(value = "GET 메서드 예제", notes="@RequestParam을 활용한 GET Method")
+    @GetMapping("/request1")
+    public String getRequestParam1(
+        @ApiParam(value="이름",required = true) @RequestParam String name,
+        @ApiParam(value="이메일",required = true) @RequestParam String email,
+        @ApiParam(value="회사",required = true) @RequestParam String origanization
+    ) {
+        return name +" " + email +" "+ origanization;
     }
 }
 
