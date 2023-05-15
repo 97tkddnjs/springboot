@@ -1,7 +1,8 @@
-package com.springboot.jpa.service;
+package com.example.test.service;
 
-import com.springboot.jpa.data.dto.ProductDto;
-import com.springboot.jpa.data.dto.ProductResponseDto;
+
+import com.example.test.data.dto.ProductDto;
+import com.example.test.data.dto.ProductResponseDto;
 
 public interface ProductService {
 
