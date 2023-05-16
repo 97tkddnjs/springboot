@@ -1,5 +1,12 @@
 package com.example.test.data.dto;
 
+import lombok.*;
+
+@Builder
+@Getter
+@Setter
+@Data
+@ToString
 public class ProductDto {
 
     private String name;

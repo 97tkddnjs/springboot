@@ -1,6 +1,11 @@
 package com.example.test.data.dto;
 
 
+import lombok.*;
+
+@Data
+@ToString
+@Builder
 public class ProductResponseDto {
 
     private Long number;
