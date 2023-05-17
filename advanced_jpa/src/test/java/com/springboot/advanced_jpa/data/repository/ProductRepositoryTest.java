@@ -23,7 +23,7 @@ public class ProductRepositoryTest {
         product1.setStock(100);
         product1.setCreatedAt(LocalDateTime.now());
         product1.setUpdatedAt(LocalDateTime.now());
-        
+
 
 
         Product product2 = new Product();
