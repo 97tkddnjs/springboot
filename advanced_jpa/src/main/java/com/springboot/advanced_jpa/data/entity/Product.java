@@ -29,6 +29,7 @@ public class Product {
     @Column(nullable = false)
     private Integer stock;
 
+    @JoinColumn()
     private LocalDateTime createdAt;
 
     private LocalDateTime updatedAt;
