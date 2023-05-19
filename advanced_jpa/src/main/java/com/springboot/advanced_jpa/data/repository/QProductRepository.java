@@ -8,3 +8,4 @@ public interface QProductRepository extends JpaRepository<Product, Long>,
         QuerydslPredicateExecutor<Product> {
 
 }
+

@@ -150,4 +150,18 @@ public class ProductRepositoryTest {
 
     }
 
+    @Test
+    public void auditingTest() {
+        Product product = new Product();
+        product.setName("pen");
+        product.setPrice(1000);
+        product.setStock(100);
+
+        Product saveProduct = productRepository.save(product);
+
+        System.out.println("saveProduct.getName() = " + saveProduct.getName());
+        System.out.println("saveProduct.getCreatedAt() = " + saveProduct.getCreatedAt());
+
+    }
+
 }

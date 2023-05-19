@@ -6,15 +6,13 @@ import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "product")
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@EqualsAndHashCode
 @Getter
 @Setter
-@ToString(exclude = "name")
-public class Product {
+@Table(name = "product")
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
+public class Product extends BaseEntity{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,9 +27,5 @@ public class Product {
     @Column(nullable = false)
     private Integer stock;
 
-    @JoinColumn()
-    private LocalDateTime createdAt;
-
-    private LocalDateTime updatedAt;
 
 }
